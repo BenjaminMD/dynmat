@@ -156,6 +156,7 @@ dmypy.json
 
 /.virtual_documents/
 .jupyter/
+/.DS_Store
 
 # Pyre type checker
 .pyre/
