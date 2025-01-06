@@ -39,4 +39,4 @@ def fractional_to_cartesian_transform(
 
     transformation_matrix = array([row1, row2, row3])
 
-    return transformation_matrix
+    return transformation_matrix.T
