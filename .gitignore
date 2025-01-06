@@ -155,6 +155,7 @@ venv.bak/
 dmypy.json
 
 /.virtual_documents/
+.jupyter/
 
 # Pyre type checker
 .pyre/
