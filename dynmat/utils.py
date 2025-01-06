@@ -17,7 +17,7 @@ def periodic_distance(p1, p2):
     p2 = array(p2) % 1
 
     p1 = p1.reshape(-1, 3)
-    p1 = p2.reshape(-1, 3)
+    p2 = p2.reshape(-1, 3)
 
     delta = abs(p2 - p1)
     delta = minimum(delta, 1 - delta)  # Wrap around the boundary
