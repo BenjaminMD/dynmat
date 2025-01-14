@@ -8,7 +8,7 @@ NPF64 = NDArray[float64]
 
 def fractional_to_cartesian_transform(
     lattice_lengths: Tuple[float, float, float],
-    lattice_angles: Tuple[float, float, float]
+    lattice_angles: Tuple[float, float, float],
 ) -> NPF64:
     """
     Computes the transformation matrix to convert fractional
@@ -26,8 +26,11 @@ def fractional_to_cartesian_transform(
 
     # Calculate intermediate terms for the transformation matrix
     z_component = sqrt(
-        1 + 2 * cos(alpha) * cos(beta) * cos(gamma)
-        - cos(alpha)**2 - cos(beta)**2 - cos(gamma)**2
+        1
+        + 2 * cos(alpha) * cos(beta) * cos(gamma)
+        - cos(alpha) ** 2
+        - cos(beta) ** 2
+        - cos(gamma) ** 2
     ) / sin(gamma)
 
     y_component = (cos(alpha) - cos(beta) * cos(gamma)) / sin(gamma)
