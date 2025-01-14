@@ -2,7 +2,7 @@ from typing import Dict
 
 import toml
 
-from .cell import UnitCell
+from ..cell import UnitCell
 
 
 def load_unit_cell_from_toml(file_path: str) -> UnitCell:
