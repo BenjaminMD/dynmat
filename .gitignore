@@ -158,6 +158,7 @@ dmypy.json
 .jupyter/
 /.DS_Store
 
+project_structure
 # Pyre type checker
 .pyre/
 
