@@ -55,9 +55,7 @@ class UnitCell:
             90.0,
             90.0,
         ),
-        basis: Optional[
-            List[Tuple[str, Tuple[float, float, float]]]
-        ] = None,
+        basis: Optional[List[Tuple[str, Tuple[float, float, float]]]] = None,
     ):
         self.a, self.b, self.c = lattice_lengths
         self.alpha, self.beta, self.gamma = [
@@ -66,12 +64,8 @@ class UnitCell:
         self.basis = basis if basis is not None else []
         self.lattice_lengths = lattice_lengths
         self.lattice_angles = lattice_angles
-        self.positions: NPF64 = np.array(
-            [atom[1] for atom in self.basis]
-        )
-        self.labels: NPS = np.array(
-            [atom[0] for atom in self.basis]
-        )
+        self.positions: NPF64 = np.array([atom[1] for atom in self.basis])
+        self.labels: NPS = np.array([atom[0] for atom in self.basis])
 
     def supercell(self, dimensions: Tuple[int, int, int]) -> "UnitCell":
         """
@@ -100,12 +94,8 @@ class UnitCell:
                         new_z = (atom[2] + z_shift) / nz if nz > 0 else atom[2]
                         new_basis.append((label, (new_x, new_y, new_z)))
 
-        self.positions: NPF64 = np.array(
-            [atom[1] for atom in new_basis]
-        )
-        self.labels: NPS = np.array(
-            [atom[0] for atom in new_basis]
-        )
+        self.positions: NPF64 = np.array([atom[1] for atom in new_basis])
+        self.labels: NPS = np.array([atom[0] for atom in new_basis])
 
         alpha, beta, gamma = [
             np.rad2deg(i) for i in (self.alpha, self.beta, self.gamma)
