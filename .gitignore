@@ -165,6 +165,7 @@ project_structure
 
 # pytype static type analyzer
 .pytype/
+notebooks_backup/
 
 # Cython debug symbols
 cython_debug/
