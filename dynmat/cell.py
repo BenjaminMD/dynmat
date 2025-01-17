@@ -144,7 +144,7 @@ class UnitCell:
             * (nz if nz > 0 else 1)
         )
         new_positions = np.empty((n_atoms * n_cells, 3), dtype=np.float64)
-        new_labels = np.empty(n_atoms * n_cells, dtype=str)
+        new_labels = np.empty(n_atoms * n_cells, dtype=object)
 
         idx = 0
         for i in range(nx if nx > 0 else 1):
@@ -158,7 +158,8 @@ class UnitCell:
                     # Add atoms for this cell
                     for atom_idx in range(n_atoms):
                         new_positions[idx] = np.array(
-                            self._positions[atom_idx] + offset) / [nx, ny, nz]
+                            self._positions[atom_idx] + offset
+                        ) / [nx, ny, nz]
                         new_labels[idx] = self._labels[atom_idx]
                         idx += 1
 
