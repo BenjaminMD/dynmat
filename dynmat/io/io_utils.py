@@ -31,7 +31,7 @@ def load_unit_cell_from_toml(file_path: str) -> UnitCell:
     )
 
     # Extract atomic basis
-    atomic_basis = [
+    basis = [
         (atom["element"], tuple(atom["position"]))
         for atom in data["atoms"]["basis"]
     ]
@@ -39,5 +39,5 @@ def load_unit_cell_from_toml(file_path: str) -> UnitCell:
     return UnitCell(
         lattice_lengths=lattice_lengths,
         lattice_angles=lattice_angles,
-        atomic_basis=atomic_basis,
+        basis=basis,
     )
