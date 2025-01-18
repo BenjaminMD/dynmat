@@ -13,7 +13,7 @@ class UnitCell:
 
     Attributes:
         lattice_lengths (Tuple[float, float, float]): (a, b, c) lengths
-        lattice_angles (Tuple[float, float, float]): (α, β, γ) angles in degrees
+        lattice_angles (Tuple[float, float, float]): (α, β, γ) angles in deg
         positions (NDArray): Nx3 array of fractional coordinates
         labels (NDArray): N-length array of atomic element labels
     """
@@ -120,7 +120,7 @@ class UnitCell:
         Create a supercell by scaling the unit cell dimensions & atomic basis.
 
         Args:
-            dimensions (Tuple[int, int, int]): Scaling (nx, ny, nz) for each axis.
+            dimensions (Tuple[int, int, int]): Scaling (nx, ny, nz) each axis.
 
         Returns:
             UnitCell: A new UnitCell object representing the supercell.
