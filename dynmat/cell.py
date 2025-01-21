@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 from typing import List, Optional, Tuple
 
@@ -61,55 +63,88 @@ class UnitCell:
 
     @property
     def a(self) -> float:
+        """
+        :no-index:
+        """
         return self.lattice_lengths[0]
 
     @property
     def b(self) -> float:
+        """
+        :no-index:
+        """
         return self.lattice_lengths[1]
 
     @property
     def c(self) -> float:
+        """
+        :no-index:
+        """
         return self.lattice_lengths[2]
 
     @property
     def alpha(self) -> float:
+        """
+        :no-index:
+        """
         return self._angles_deg[0]
 
     @property
     def beta(self) -> float:
+        """
+        :no-index:
+        """
         return self._angles_deg[1]
 
     @property
     def gamma(self) -> float:
+        """
+        :no-index:
+        """
         return self._angles_deg[2]
 
     @property
     def alpha_rad(self) -> float:
+        """
+        :no-index:
+        """
         return self._angles_rad[0]
 
     @property
     def beta_rad(self) -> float:
+        """
+        :no-index:
+        """
         return self._angles_rad[1]
 
     @property
     def gamma_rad(self) -> float:
+        """
+        :no-index:
+        """
         return self._angles_rad[2]
 
     @property
     def positions(self) -> NDArray:
-        """Get atomic positions array (read-only)"""
+        """Get atomic positions array (read-only)
+        :no-index:
+        """
         return self._positions.copy()
 
     @property
     def labels(self) -> NDArray:
-        """Get atomic labels array (read-only)"""
+        """Get atomic labels array (read-only)
+        :no-index:
+        """
         return self._labels.copy()
 
     @property
     def basis(
         self,
     ) -> List[Tuple[str, Tuple[float, float, float]]]:
-        """Generate basis list format from internal arrays"""
+        """Generate basis list format from internal arrays
+        :no-index:
+        """
         return [
             (label, tuple(pos))
             for label, pos in zip(self._labels, self._positions)

@@ -2,10 +2,10 @@ from typing import Dict
 
 import toml
 
-from ..cell import UnitCell
+from ..cell import UnitCell as UC
 
 
-def load_unit_cell_from_toml(file_path: str) -> UnitCell:
+def load_unit_cell_from_toml(file_path: str) -> UC:
     """
     Load unit cell from a TOML file and convert it to a UnitCell object.
 
@@ -36,7 +36,7 @@ def load_unit_cell_from_toml(file_path: str) -> UnitCell:
         for atom in data["atoms"]["basis"]
     ]
 
-    return UnitCell(
+    return UC(
         lattice_lengths=lattice_lengths,
         lattice_angles=lattice_angles,
         basis=basis,

@@ -1,7 +1,8 @@
+from typing import Tuple
+
 import numpy as np
 from mendeleev import element
 from numpy.typing import NDArray
-from tuple import Tuple
 
 from .utils import periodic_distance
 
@@ -170,10 +171,6 @@ def get_harmonic_force(reference_pos: NDArray,
 
     atom1_idx = np.where(atom1_mask)[0]
     atom2_idx = np.where(atom2_mask)[0]
-
-    if len(atom1_idx) != 1 or len(atom2_idx) != 1:
-        raise ValueError(f"Could not uniquely identify atoms. Found {len(
-            atom1_idx)} matches for atom1 and {len(atom2_idx)} for atom2")
 
     # Get equilibrium distance from the distance matrix
     equilibrium_distance = distance_matrix[atom1_idx[0], atom2_idx[0]]

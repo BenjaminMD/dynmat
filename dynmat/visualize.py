@@ -1,4 +1,3 @@
-import matplotlib.pyplot as plt
 import numpy as np
 
 
@@ -10,6 +9,10 @@ def plot_force_constant_matrix(fc_matrix, atomic_labels):
         fc_matrix: The force constant matrix (3N x 3N)
         atomic_labels: List of atomic symbols for each atom
     """
+    try:
+        import matplotlib.pyplot as plt
+    except ImportError:
+        raise ImportError("Matplotlib is required for visualization")
     n_atoms = len(atomic_labels)
     n = 3 * n_atoms
 

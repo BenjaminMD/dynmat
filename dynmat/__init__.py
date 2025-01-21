@@ -1,12 +1,11 @@
+from __future__ import annotations
+
 from .cell import UnitCell
 from .force import get_forces_3x3
 from .geometry import fractional_to_cartesian_transform
 from .io.io_utils import load_unit_cell_from_toml
-from .utils import (
-    is_nearest_neighbors,
-    periodic_distance,
-    periodic_distance_mat,
-)
+from .utils import (is_nearest_neighbors, periodic_distance,
+                    periodic_distance_mat)
 
 __all__ = [
     "fractional_to_cartesian_transform",
