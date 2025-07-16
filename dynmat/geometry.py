@@ -6,7 +6,7 @@ from numpy.typing import NDArray
 NPF64 = NDArray[float64]
 
 
-def fractional_to_cartesian_transform(
+def fractional_to_cartesian(
     lattice_lengths: Tuple[float, float, float],
     lattice_angles: Tuple[float, float, float],
 ) -> NPF64:
