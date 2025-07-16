@@ -192,3 +192,4 @@ def get_harmonic_force(reference_pos: NDArray,
     force_vector = force_magnitude * direction
 
     return force_vector, force_constant
+

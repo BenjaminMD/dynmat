@@ -5,7 +5,7 @@ import toml
 from ..cell import UnitCell as UC
 
 
-def load_unit_cell_from_toml(file_path: str) -> UC:
+def load_cell_toml(file_path: str) -> UC:
     """
     Load unit cell from a TOML file and convert it to a UnitCell object.
 
